@@ -43,9 +43,9 @@ class _WeatherScreenState extends State<WeatherScreen> {
     dust2 = airData['list'][0]['components']['pm2_5'];
     temp = temp2.round();
     cityName = weatherData['name'];
-    icon = model.getWeatherIcon(condition);
-    airIcon = model.getAirIcon(index);
-    airState = model.getAirCondition(index);
+    icon = model.getWeatherIcon(condition)!;
+    airIcon = model.getAirIcon(index)!;
+    airState = model.getAirCondition(index)!;
 
     print(temp);
     print(cityName);
@@ -146,7 +146,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
                             ),
                             Row(
                               children: [
-                                icon,
+                                icon!,
                                 SizedBox(
                                   width: 10.0,
                                 ),
@@ -186,11 +186,11 @@ class _WeatherScreenState extends State<WeatherScreen> {
                               SizedBox(
                                 height: 10.0,
                               ),
-                              airIcon,
+                              airIcon!,
                               SizedBox(
                                 height: 10.0,
                               ),
-                              airState,
+                              airState!,
                             ],
                           ),
                           Column(

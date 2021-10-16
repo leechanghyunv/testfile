@@ -4,6 +4,7 @@ import 'dart:convert';
 class Network{
   final String url;
   final String url2;
+
   Network(this.url, this.url2);
 
   Future<dynamic> getJsonData() async {

@@ -2,9 +2,11 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter/material.dart';
 
+// 1. getWeatherIcon 2. getAirIcon 3. getAircondition
+
 class Model {
-  Widget getWeatherIcon(int condition) {
-    if (condition < 300) {
+  Widget? getWeatherIcon(int? condition) {
+    if (condition! < 300) {
       return SvgPicture.asset(
         'svg/climacon-colud_lightning.svg',
         color: Colors.black87,
@@ -27,8 +29,8 @@ class Model {
     }
   }
 
-  Widget getAirIcon(int index) {
-    if (index == 1) {
+  Widget? getAirIcon(int? index) {
+    if (index! == 1) {
       return Image.asset(
         'image/good.png',
         width: 37.0,
@@ -61,8 +63,8 @@ class Model {
     }
   }
 
-  Widget getAirCondition(int index) {
-    if (index == 1) {
+  Widget? getAirCondition(int? index) {
+    if (index! == 1) {
       return Text(
         '"매우좋음"',
         style: TextStyle(
